@@ -4,6 +4,8 @@
 
 個人の取引管理ツールではなく、保有銘柄のリスク露出とマーケット材料の関連を見せるポートフォリオ用デモとして作っています。
 
+**Live Demo:** https://market-portfolio-intelligence-dashboard.onrender.com
+
 ## What This App Does
 
 - サンプルポートフォリオの評価額、損益、保有銘柄を表示
@@ -66,13 +68,19 @@ PORT=4174 node server.js
 Render の Web Service で動かす場合は、次の設定を使えます。
 
 ```text
-Build Command: （空欄でOK）
+Build Command: npm install
 Start Command: node server.js
 Environment Variables:
   HOST=0.0.0.0
 ```
 
-このリポジトリには `render.yaml` も入れているため、Render の Blueprint として作成することもできます。
+公開済みURL:
+
+```text
+https://market-portfolio-intelligence-dashboard.onrender.com
+```
+
+このリポジトリには `render.yaml` も入れているため、Render の Blueprint として作成することもできます。無料枠では初回アクセス時に起動待ちが発生することがあります。
 
 ## Project Structure
 

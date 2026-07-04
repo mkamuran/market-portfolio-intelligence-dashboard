@@ -2,8 +2,11 @@ services:
   - type: web
     name: market-portfolio-intelligence-dashboard
     runtime: node
-    buildCommand: ""
+    plan: free
+    region: oregon
+    buildCommand: npm install
     startCommand: node server.js
+    healthCheckPath: /
     envVars:
       - key: HOST
         value: 0.0.0.0
