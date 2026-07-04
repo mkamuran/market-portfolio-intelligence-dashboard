@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "newsCache": {
+    "fetchedAt": null,
+    "items": []
+  },
+  "portfolios": [
+    {
+      "transactions": [
+        {
+          "id": "demo-7203",
+          "portfolioId": "demo-balanced",
+          "date": "2026-04-01",
+          "type": "buy",
+          "assetType": "stock-jp",
+          "symbol": "7203.T",
+          "name": "Toyota Motor",
+          "quantity": 100,
+          "price": 2850,
+          "currency": "JPY",
+          "amountJPY": 285000,
+          "feeJPY": 0,
+          "sector": "Automobiles",
+          "region": "Japan",
+          "themes": [
+            "equity",
+            "cyclical",
+            "fx",
+            "china"
+          ]
+        },
+        {
+          "id": "demo-8035",
+          "portfolioId": "demo-balanced",
+          "date": "2026-04-01",
+          "type": "buy",
+          "assetType": "stock-jp",
+          "symbol": "8035.T",
+          "name": "Tokyo Electron",
+          "quantity": 10,
+          "price": 28000,
+          "currency": "JPY",
+          "amountJPY": 280000,
+          "feeJPY": 0,
+          "sector": "Semiconductors",
+          "region": "Japan",
+          "themes": [
+            "equity",
+            "growth",
+            "semiconductor",
+            "china"
+          ]
+        },
+        {
+          "id": "demo-5020",
+          "portfolioId": "demo-balanced",
+          "date": "2026-04-01",
+          "type": "buy",
+          "assetType": "stock-jp",
+          "symbol": "5020.T",
+          "name": "ENEOS Holdings",
+          "quantity": 300,
+          "price": 760,
+          "currency": "JPY",
+          "amountJPY": 228000,
+          "feeJPY": 0,
+          "sector": "Energy",
+          "region": "Japan",
+          "themes": [
+            "equity",
+            "energy",
+            "inflation",
+            "defensive"
+          ]
+        },
+        {
+          "id": "demo-aapl",
+          "portfolioId": "demo-balanced",
+          "date": "2026-04-01",
+          "type": "buy",
+          "assetType": "stock-us",
+          "symbol": "AAPL",
+          "name": "Apple",
+          "quantity": 8,
+          "price": 190,
+          "currency": "USD",
+          "fxRate": 155,
+          "feeJPY": 0,
+          "sector": "Technology",
+          "region": "United States",
+          "themes": [
+            "equity",
+            "growth",
+            "us",
+            "fx",
+            "consumer"
+          ]
+        },
+        {
+          "id": "demo-voo",
+          "portfolioId": "demo-balanced",
+          "date": "2026-04-01",
+          "type": "buy",
+          "assetType": "stock-us",
+          "symbol": "VOO",
+          "name": "Vanguard S&P 500 ETF",
+          "quantity": 4,
+          "price": 510,
+          "currency": "USD",
+          "fxRate": 155,
+          "feeJPY": 0,
+          "sector": "Broad Market",
+          "region": "United States",
+          "themes": [
+            "equity",
+            "growth",
+            "us",
+            "rates"
+          ]
+        }
+      ],
+      "recurringRules": [],
+      "id": "demo-balanced",
+      "name": "Balanced Market Watch",
+      "mode": "standard",
+      "strategy": "Japan / US equity sample",
+      "baseCurrency": "JPY"
+    }
+  ],
+  "eventOverrides": []
+}

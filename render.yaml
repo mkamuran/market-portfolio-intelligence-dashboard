@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: market-portfolio-intelligence-dashboard
+    runtime: node
+    buildCommand: ""
+    startCommand: node server.js
+    envVars:
+      - key: HOST
+        value: 0.0.0.0

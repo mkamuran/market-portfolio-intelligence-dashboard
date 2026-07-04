@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Market & Portfolio Intelligence Dashboard</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">Market Intelligence</p>
+        <h1>Market & Portfolio Intelligence Dashboard</h1>
+      </div>
+      <div class="header-actions">
+        <button id="refreshAll" class="primary">更新</button>
+        <button id="refreshNews">ニュース再取得</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="metric-grid" id="metricGrid"></section>
+
+      <section class="workbench">
+        <article class="panel portfolio-panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Demo Portfolio</p>
+              <h2>サンプルポートフォリオ</h2>
+            </div>
+            <span id="asOf" class="muted"></span>
+          </div>
+          <div id="portfolioGrid" class="portfolio-grid loading">読み込み中</div>
+        </article>
+
+        <aside class="panel focus-panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Focus</p>
+              <h2>今日見るべき材料</h2>
+            </div>
+          </div>
+          <div id="focusList" class="focus-list loading">読み込み中</div>
+        </aside>
+      </section>
+
+      <section class="panel editor-panel">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Portfolio Editor</p>
+            <h2>サンプル銘柄エディタ</h2>
+          </div>
+          <button id="resetDemo" type="button">サンプルに戻す</button>
+        </div>
+        <form id="holdingForm" class="editor-form">
+          <input name="id" type="hidden" />
+          <label>
+            銘柄コード
+            <input name="symbol" placeholder="7203.T" required />
+          </label>
+          <label>
+            名称
+            <input name="name" placeholder="Toyota Motor" required />
+          </label>
+          <label>
+            資産
+            <select name="assetType">
+              <option value="stock-jp">日本株</option>
+              <option value="stock-us">米国株 / ETF</option>
+              <option value="fund">投資信託</option>
+              <option value="crypto">暗号資産</option>
+            </select>
+          </label>
+          <label>
+            数量
+            <input name="quantity" type="number" step="0.00000001" required />
+          </label>
+          <label>
+            取得単価
+            <input name="price" type="number" step="0.0001" required />
+          </label>
+          <label>
+            通貨
+            <select name="currency">
+              <option value="JPY">JPY</option>
+              <option value="USD">USD</option>
+            </select>
+          </label>
+          <label>
+            約定為替
+            <input name="fxRate" type="number" step="0.0001" placeholder="155" />
+          </label>
+          <label>
+            地域
+            <input name="region" placeholder="Japan" />
+          </label>
+          <label>
+            セクター
+            <input name="sector" placeholder="Technology" />
+          </label>
+          <label class="wide">
+            テーマ
+            <input name="themes" placeholder="equity, growth, fx" />
+          </label>
+          <div class="editor-actions wide">
+            <button class="primary" type="submit">保存</button>
+            <button id="clearHoldingForm" type="button">クリア</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="analysis-grid">
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Risk Exposure</p>
+              <h2>リスク露出</h2>
+            </div>
+          </div>
+          <div id="exposureGrid" class="exposure-grid loading">読み込み中</div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Market Events</p>
+              <h2>重要イベント</h2>
+            </div>
+            <div class="segmented">
+              <button data-event-sort="priority" class="active">重要度</button>
+              <button data-event-sort="date">日付</button>
+            </div>
+          </div>
+          <div id="eventList" class="event-list loading">読み込み中</div>
+        </article>
+      </section>
+
+      <section class="panel news-panel">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Headlines</p>
+            <h2>マーケットニュース</h2>
+          </div>
+          <span id="newsStatus" class="muted"></span>
+        </div>
+        <div id="newsList" class="news-list loading">読み込み中</div>
+      </section>
+    </main>
+
+    <div id="toast" class="toast" hidden></div>
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
