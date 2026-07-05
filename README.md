@@ -6,6 +6,8 @@
 
 **Live Demo:** https://market-portfolio-intelligence-dashboard.onrender.com
 
+![Market & Portfolio Intelligence Dashboard screenshot](docs/dashboard-screenshot.png)
+
 ## What This App Does
 
 - サンプルポートフォリオの評価額、損益、保有銘柄を表示
